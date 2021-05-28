@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Classification By Image</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+
+.hero {
+    background: black url(static/images/5.jpg) center / cover;
+}
+    </style>
+    <link rel="stylesheet" href="static/css/bootstrap/bootstrap.css">
+
+
+  </head>
+
+    
+<body>
+
+<!-- .hero -->
+<section class="hero is-fullheight" has-background-black>
+
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h1 style="-webkit-text-stroke: 3px black; font-size: 50px;color: white;"><b>Deteksi Penggunaan Masker <br>
+                Pada Citra Gambar / Foto Sebagai Inputan</b>
+            </h1>
+        </div>   
+    </section> 
+
+
+    <section class="section" style=" background-color: rgba(255, 255,255, 0.5);">
+        <div class="container has-text-centered bg-text" style="width: 100%;">
+                <p class="subtitle" style="color:black">
+                  <strong><b>Pilih gambar / foto yang ingin uji</b></strong>
+                </p>
+              <div>
+                <i class="arrow_down"></i>
+                <form action="/classified" method="post" enctype="multipart/form-data" style="margin-top: 30px; width: 80%; text-align: center; margin: auto;">
+                  <div class="file has-name is-centered">     
+                      <label class="file-label">
+                        <input class="file-input" type="file" id="image" name = "image">
+                        <span class="file-cta">
+                          <span class="file-label">
+                            <b>Upload gambar/foto</b>
+                          </span>
+                        </span>
+                        <span class="file-name" id="file-name">
+                          <b>Tidak ada file yang dipilih</b>
+                        </span>
+      
+                      </label>
+                    </div>
+                    <br>
+                    <input type="submit" value="Klasifikasi" class="button is-black" name = "image" id="classify_button" style="margin-right: 7%;">
+                    <a href="{{ url_for('home') }}"><input value="Home" class="button is-black" name = "image" id="classify_button" style="width: 94px;"></a>
+
+                </form>
+      
+                </div>
+               
+              </div>
+            </div>
+        </div>
+</section>
+
+<section></section>
+<section></section>
+<section></section>
+
+    <!-- /.section -->
+<!-- /.hero -->
+
+
+<script src="/static/script.js"></script>
+</body>
+</html>

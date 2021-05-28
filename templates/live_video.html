@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIVE_VIDEO.HTML</title>
+</head>
+<body>
+  <style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      height: 50%;
+      border: 5px solid white;
+    }
+  </style>
+  </head>
+  <body style="background: white;background-image: url(static/images/9.jpg); background-size: cover;">
+    <h1 align="center" style="color: white;">Demonstrasi Video Streaming</h1>
+    <div style="text-align: center;">
+      <img src="{{ url_for('video_feed') }}">
+  </div>
+</body>
+</html>

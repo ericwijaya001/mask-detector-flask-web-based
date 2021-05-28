@@ -1,0 +1,2 @@
+buat nge run appnya
+python app.py
